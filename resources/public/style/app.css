@@ -1,0 +1,27 @@
+html{
+    color: #fff;
+}
+
+body {
+    #background-color: #286090;
+    #color: #fff;
+    text-align: center;
+}
+
+header {
+    padding-top: 25px;
+    height: 180px;
+}
+
+h1{
+    #color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.query-panel{
+    width: 50px;
+    margin: auto;
+}
+
+
