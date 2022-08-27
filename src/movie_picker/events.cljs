@@ -65,7 +65,7 @@
 (re-frame/reg-event-db
   :select-movie
   (fn [db _]
-    (assoc db :selected-movie (:title (rand-nth (:movies db))))))
+    (assoc db :selected-movie (rand-nth (:movies db)))))
 
 (re-frame/reg-event-db
   :movie-selected

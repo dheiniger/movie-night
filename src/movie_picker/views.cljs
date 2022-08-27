@@ -13,7 +13,9 @@
 (defn movie-answer-panel []
   (let [movie-choice (re-frame/subscribe [::subs/random-movie])]
     (if (not (nil? @movie-choice))
-      [:h1 "You should watch \"" @movie-choice "\""])))
+      [:div [:h1 "You should watch \"" (:title @movie-choice) "\""]
+       [:a {:href (str "https://www.imdb.com/title/" (:id @movie-choice))}
+        [:img {:src (:image @movie-choice)}]]])))
 
 (defn movie-input []
   [:div [:h1 "Add a movie"]
@@ -29,6 +31,9 @@
 (defn header []
   [:header
    [:h1 "It's Movie Night!"]
+   [:nav
+    [:a {:href "/home"} Home]
+    [:a {:href "/login"} Login]]
    [:p "Having trouble choosing a movie to watch? Click the button below to have the choice made for you!"]])
 
 (defn body []
