@@ -1,11 +1,8 @@
-html{
-    color: #fff;
-}
-
 body {
-    #background-color: #286090;
-    #color: #fff;
     text-align: center;
+    background-color: #212529;
+    color: #f8f9fa;
+    margin-top:15%
 }
 
 header {
@@ -20,8 +17,9 @@ h1{
 }
 
 .query-panel{
-    width: 50px;
+    /*width: 50px;*/
     margin: auto;
+    margin-bottom: 10%;
 }
 
 
