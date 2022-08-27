@@ -30,11 +30,12 @@
 
 (defn header []
   [:header
-   [:h1 "It's Movie Night!"]
    [:nav
-    [:a {:href "/home"} Home]
-    [:a {:href "/login"} Login]]
-   [:p "Having trouble choosing a movie to watch? Click the button below to have the choice made for you!"]])
+    [:a {:href "/home"} "Home"]
+    [:a {:href "/login"} "Login"]]
+   [:div.heading
+    [:h1 "It's Movie Night!"]
+    [:p "Having trouble choosing a movie to watch? Click the button below to have the choice made for you!"]]])
 
 (defn body []
   [:div
@@ -43,12 +44,11 @@
 
 (defn main-panel []
   (let [state (re-frame/subscribe [::subs/state])]
-    [:div
-     (if (= :loading @state)
-       [:div {:class "spinner-border text-light"}
-        [:span {:class "visually-hidden"}]]
-       [:div
-        [header]
-        [body]])]))
+    (if (= :loading @state)
+      [:div.spinner-border.text-light
+       [:span.visually-hidden]]
+      [:div
+       [header]
+       [body]])))
 
 

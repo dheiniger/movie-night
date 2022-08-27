@@ -2,12 +2,19 @@ body {
     text-align: center;
     background-color: #212529;
     color: #f8f9fa;
-    margin-top:15%
 }
 
 header {
     padding-top: 25px;
-    height: 180px;
+}
+
+nav{
+    float: right;
+}
+
+nav a{
+    padding:1px;
+    color: white;
 }
 
 h1{
@@ -22,4 +29,7 @@ h1{
     margin-bottom: 10%;
 }
 
+.heading{
+    margin-top:15%;
+}
 
