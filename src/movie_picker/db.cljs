@@ -2,6 +2,7 @@
 
 (def default-db
   {:state :not-loading
-   :name "Daniel!!"
+   :page :home
+   :username nil
    :movies [{:title "Top Gun"} {:title "Top Gun 2"} {:title "Mrs. Doubtfire"}]
    :selected-movie nil})
