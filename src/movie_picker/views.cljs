@@ -50,7 +50,7 @@
       [:div.mb-3
        [:label.form-label.pe-3 {:for "password"} "Password"]
        [:input#password {:type "password" :on-change #(reset! password (get-value %))}]]]
-     [:button.btn.btn-outline-light {:on-click #(re-frame/dispatch [:attempt-login @username @password])} "Login"]]))
+     [:button.btn.btn-outline-light {:on-click #(re-frame/dispatch [:login @username @password])} "Login"]]))
 
 (def routes
   {:home  home-panel
